@@ -80,3 +80,4 @@ function addLine(){
         textBox.value = "";
     } else return null;
 };
+
