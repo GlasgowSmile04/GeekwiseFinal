@@ -1,5 +1,9 @@
 body {
-    background: url()
+    background: url(background.jpg);
+    background-size:cover;    
+}
+.container {
+    background:rgba(211, 211, 211, .8);
 }
 .header {
     text-align: center;
@@ -30,5 +34,10 @@ body {
 }
 
 .btn-div {
+    display:flex;
     flex:1;
+}
+
+.completed {
+    text-decoration: line-through;
 }
