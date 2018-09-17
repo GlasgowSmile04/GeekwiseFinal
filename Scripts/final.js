@@ -22,8 +22,19 @@ function deleteLine(e){
     };
 };
 
-function editLine(){
-
+function editLine(e){
+    let editBtn = e.target
+    let btnDiv = e.target.parentElement;
+    let editText = btnDiv.previousSibling
+    if(editText.hasAttribute("contenteditable")){
+        editBtn.previousSibling.removeAttribute("disabled", "disabled");
+        editBtn.nextSibling.removeAttribute("disabled", "disabled");
+        editText.removeAttribute("contenteditable");
+    } else {
+        editText.setAttribute("contenteditable", true)
+        editBtn.previousSibling.setAttribute("disabled", "disabled");
+        editBtn.nextSibling.setAttribute("disabled", "disabled");
+    }
 };
 
 function completeLine(e){
