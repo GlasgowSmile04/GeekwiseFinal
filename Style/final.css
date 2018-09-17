@@ -2,18 +2,19 @@ body {
     background: url(background.jpg);
     background-size:cover;
     font-family: "Open Sans", sans-serif;
+
 }
 
 .container {
+    background:rgba(211, 211, 211, .6);
+    padding-top: 0px;
+    margin-top: 10%;
 
-    margin: 5%;
 }
 .header {
-    background:rgba(211, 211, 211, .8);
     font-family: "Permanent Marker", cursive;
     text-align: center;
     padding: 10px;
-    margin: 10% 0 0 0;
 }
 
 .container-2 {
@@ -34,16 +35,15 @@ body {
 }
 
 .list {
-    background:rgba(211, 211, 211, .8);
     display: flex;
     flex-direction: column;
-    padding-bottom: 1%;
+    padding-bottom: 10px;
 }
 
 .new-li {
     display:flex;
     padding: 4px;
-    border: 1px solid rgba(166, 166, 166, .6);
+    border: 1px solid rgba(145, 145, 145, .8);
     text-align: center;
     width: 66%;
     align-self: center;
