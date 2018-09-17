@@ -1,11 +1,16 @@
 body {
     background: url(background.jpg);
-    background-size:cover;    
+    background-size:cover;
+    font-family: "Open Sans", sans-serif;
 }
+
 .container {
-    background:rgba(211, 211, 211, .8);
+
+    margin: 5%;
 }
 .header {
+    background:rgba(211, 211, 211, .8);
+    font-family: "Permanent Marker", cursive;
     text-align: center;
     padding: 10px;
     margin: 10% 0 0 0;
@@ -14,19 +19,35 @@ body {
 .container-2 {
     display: flex;
     align-content: center; 
+    margin-bottom: 2%;
+    justify-content: center;
 }
 
 .container-2-input {
-    flex:4;
+    font-family: "Open Sans", sans-serif;
+}
+#textBox {
+    width: 615px;
+}
+.btn.btn-info {
+    font-family: "Open Sans", sans-serif;
 }
 
-.container-2-button {
-    flex:1;
-    
-} 
+.list {
+    background:rgba(211, 211, 211, .8);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1%;
+}
 
 .new-li {
     display:flex;
+    padding: 4px;
+    border: 1px solid rgba(166, 166, 166, .6);
+    text-align: center;
+    width: 66%;
+    align-self: center;
+
 }
 
 .text-div {
@@ -35,9 +56,26 @@ body {
 
 .btn-div {
     display:flex;
+    justify-content: center;
     flex:1;
 }
 
 .completed {
     text-decoration: line-through;
+}
+
+.btn-primary {
+    order: 1;
+    height: 22px;
+    margin: 4px;
+}
+.btn-danger {
+    order: 3;
+    height: 22px;
+    margin: 4px;
+}
+.btn-success {
+    order: 2;
+    height: 22px;
+    margin: 4px;
 }
