@@ -1,0 +1,23 @@
+div {
+    /* border: 1px solid black; */
+}
+
+.header {
+    text-align: center;
+    padding: 10px;
+    margin: 10% 0 0 0;
+}
+
+.container-2 {
+    display: flex;
+    align-content: center; 
+}
+
+.container-2-input {
+    flex:4;
+}
+
+.container-2-button {
+    flex:1;
+    justify-content: flex-start;
+} 
