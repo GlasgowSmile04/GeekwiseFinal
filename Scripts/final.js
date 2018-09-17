@@ -28,8 +28,10 @@ function editLine(){
 
 function completeLine(e){
     let btnDiv = e.target.parentElement;
+    let editBtn = e.target.previousSibling;
     btnDiv.previousSibling.classList.toggle("completed")
-    
+    if(editBtn.hasAttribute("disabled")){editBtn.removeAttribute("disabled");}
+    else editBtn.setAttribute("disabled", "disabled");
 };
 
 function addLine(){
