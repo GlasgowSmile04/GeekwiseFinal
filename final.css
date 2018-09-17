@@ -1,7 +1,6 @@
-div {
-    /* border: 1px solid black; */
+body {
+    background: url()
 }
-
 .header {
     text-align: center;
     padding: 10px;
@@ -19,5 +18,17 @@ div {
 
 .container-2-button {
     flex:1;
-    justify-content: flex-start;
+    
 } 
+
+.new-li {
+    display:flex;
+}
+
+.text-div {
+    flex:4;
+}
+
+.btn-div {
+    flex:1;
+}
