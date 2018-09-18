@@ -6,7 +6,14 @@ body {
 }
 
 #myBtn {
-    height: 30px;
+    height: 100%;
+}
+#submitBtn {
+    height: 100%;
+}
+
+.btn-div-main {
+    /* justify-items: flex-start; */
 }
 
 .container {
@@ -33,7 +40,8 @@ body {
     font-family: "Open Sans", sans-serif;
 }
 #textBox {
-    width: 615px;
+    width: 35vw;
+    height: 100%;
 }
 .btn.btn-info {
     font-family: "Open Sans", sans-serif;
