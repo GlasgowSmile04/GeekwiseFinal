@@ -7,9 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="Style/final.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
+
 <div class="container">
     <div class="header">
         <h1>Todo List:</h1>
@@ -18,19 +20,34 @@
             <div class="container-2-input">
                 <input type="text" class="form-control" id="textBox">
             </div>
-            
                 <button class="btn btn-info" id="submitBtn">Submit</button>
-            
+                <button class="btn btn-danger" id="myBtn"><i class="far fa-trash-alt"></i></button>
         </div>
     </div>
     <div class="list-div">
         <ul class="list">
-            <li class="new-li"><div class="text-div">Clean your room </div><div class="btn-div"><button class="btn btn-danger btn-xs">Delete</button><button class="btn btn-primary btn-xs">Edit</button><button class="btn btn-success btn-xs">Complete</button></div></li>
-            <li class="new-li"><div class="text-div">Learn Flexbox</div><div class="btn-div"><button class="btn btn-danger btn-xs">Delete</button><button class="btn btn-primary btn-xs">Edit</button><button class="btn btn-success btn-xs">Complete</button></div></li>
+            <li class="new-li"><div class="text-div">Clean your room </div><div class="btn-div"><button class="btn btn-primary btn-xs">Edit</button><button class="btn btn-success btn-xs">Complete</button></div></li>
+            <li class="new-li"><div class="text-div">Learn Flexbox</div><div class="btn-div"><button class="btn btn-primary btn-xs">Edit</button><button class="btn btn-success btn-xs">Complete</button></div></li>
             
         </ul>
     </div>
+
 </div>
+
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="header">
+            <h1>ToDONE List:</h1>
+            <p>Look at how productive you were today!</p>
+        </div>
+        <ul class="list" id="deletedList">
+            <li class="new-li"><div class="text-div">Something clever</div><div class="btn-div"><button class="btn btn-danger btn-xs">Delete</button>
+            <li class="new-li"><div class="text-div">Do the thing</div><div class="btn-div"><button class="btn btn-danger btn-xs">Delete</button>
+        </ul>
+    </div>
+</div>
+
 <script src="Scripts/final.js"></script>
 </body>
 </html>

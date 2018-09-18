@@ -5,6 +5,10 @@ body {
 
 }
 
+#myBtn {
+    height: 30px;
+}
+
 .container {
     background:rgba(211, 211, 211, .8);
     padding-top: 0px;
@@ -81,4 +85,38 @@ body {
     order: 2;
     height: 22px;
     margin: 4px;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); 
+}
+
+.modal-content {
+    background: rgba(211, 211, 211, .8);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid rgba(100, 100, 100, .9);
+    width: 80%;
+}
+
+.close {
+    color: rgba(100, 100, 100, .9);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgba(100, 100, 100, .9);
+    text-decoration: none;
+    cursor: pointer;
 }
