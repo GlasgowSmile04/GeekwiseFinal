@@ -4,21 +4,27 @@ const script = document.querySelector("script");
 let textBox = document.querySelector("#textBox");
 let submitBtn = document.querySelector("#submitBtn");
 let ul = document.querySelector("ul");
+let deletedUl = document.querySelector("#deletedList")
+let modal = document.getElementById('myModal');
+let btn = document.getElementById("myBtn");
+let span = document.getElementsByClassName("close")[0];
 
-
-submitBtn.addEventListener("click", () => {addLine();});
+submitBtn.onclick = () => {addLine();};
 textBox.addEventListener("keypress", e => {if(e.which === 13){addLine();};});
 
-ul.addEventListener("click", e => {if(e.target.classList.contains("btn-danger")){deleteLine(e);};});
-ul.addEventListener("click", e => {if(e.target.classList.contains("btn-primary")){editLine(e);}});
-ul.addEventListener("click", e => {if(e.target.classList.contains("btn-success")){completeLine(e);}});
+ul.onclick = e => {if(e.target.classList.contains("btn-primary")){editLine(e);}};
+ul.onclick = e => {if(e.target.classList.contains("btn-success")){completeLine(e);}};
+deletedUl.onclick = e => {if(e.target.classList.contains("btn-danger")){deleteLine(e);};};
 
+btn.onclick = () => {modal.style.display = "block";}
+span.onclick = () => {modal.style.display = "none";}
+window.onclick = (e) => {if (event.target == modal) {modal.style.display = "none";}}
 
 
 function deleteLine(e){
     if(confirm("Are you sure you'd like to delete this line?")){
         let li = e.target.parentElement.parentElement;
-        ul.removeChild(li);
+        deletedUl.removeChild(li);
     };
 };
 
@@ -49,13 +55,9 @@ function addLine(){
     let newLi = document.createElement("li");
     let textDiv = document.createElement("div");
     let btnDiv = document.createElement("div");
-    let deleteBtn = document.createElement("button");
     let editBtn = document.createElement("button");
     let completeBtn = document.createElement("button");
 //STAGE DIVS 
-    //DELETE BTN
-    deleteBtn.textContent = "Delete";
-    deleteBtn.classList.add("btn", "btn-danger", "btn-xs");
     //EDIT BTN
     editBtn.textContent = "Edit";
     editBtn.classList.add("btn", "btn-primary", "btn-xs");
@@ -80,4 +82,3 @@ function addLine(){
         textBox.value = "";
     } else return null;
 };
-
