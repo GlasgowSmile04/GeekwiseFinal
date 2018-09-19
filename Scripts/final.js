@@ -31,12 +31,14 @@ function deleteLine(e){
 function editLine(e){
     let editBtn = e.target
     let btnDiv = e.target.parentElement;
-    let editText = btnDiv.previousSibling
+    let editText = btnDiv.previousSibling;
     if(editText.hasAttribute("contenteditable")){
         editBtn.nextSibling.removeAttribute("disabled", "disabled");
         editText.removeAttribute("contenteditable");
+        editText.classList.remove("focus");
     } else {
-        editText.setAttribute("contenteditable", true)
+        editText.setAttribute("contenteditable", true);
+        editText.classList.add("focus");
         editBtn.nextSibling.setAttribute("disabled", "disabled");
     }
 };

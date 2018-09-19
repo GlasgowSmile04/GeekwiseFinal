@@ -1,12 +1,19 @@
+*:focus {
+    outline: none;
+}
+body, html {margin: 0;padding: 0;}
+
 body {
     font-family: "Open Sans", sans-serif;
 
 }
+/* IDS / SPECIALS */
 #background-img {
     background-image: url(background.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
+    width: 100vw; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,19 +24,22 @@ body {
     align-self: auto;
     font-family: "Open Sans", "sans-serif";
 }
-
-#myBtn {
+#textBox {
+    width: 50vw;
     height: 100%;
-
+    border-radius: 10px;
+    font-size: 18px;
+    justify-content: center;
+    resize: none;
+    overflow: auto;
 }
-#submitBtn {
-    height: 100%;
-}
-
+/* DIVS */
 .container {
     background:rgba(211, 211, 211, .8);
     border-radius: 25px; 
     padding-bottom: 10px;
+    width: 80vw;
+    align-self: center;
     
 }
 .header {
@@ -48,14 +58,14 @@ body {
 .container-2-input {
     font-family: "Open Sans", sans-serif;
 }
-#textBox {
-    width: 50vw;
-    height: 100%;
-}
-.btn.btn-info {
-    font-family: "Open Sans", sans-serif;
-}
+.list-div {
+    border: rgba(100, 100, 100, .9) 1px solid;
+    border-radius: 25px;
+    height: 200px;
+    overflow: auto;
+    margin: 1%;
 
+}
 .list {
     display: flex;
     flex-direction: column;
@@ -69,10 +79,11 @@ body {
     border: 1px solid rgba(100, 100, 100, .9);
     border-radius: 10px;
     text-align: center;
-    width: 100%;
+    width: 94%;
     align-self: center;
     background-color: rgba(211, 211, 211, .8);
-    margin-bottom: 1%;
+    margin: 0 4% 1% 4%;
+
     visibility: visible;
     opacity: 1;
 }
@@ -83,12 +94,13 @@ body {
     border: 1px solid rgba(100, 100, 100, .9);
     border-radius: 10px;
     text-align: center;
-    width: 100%;
+    width: 80%;
     align-self: center;
     background-color: rgba(211, 211, 211, .8);
     margin-bottom: 1%;
     visibility: visible;
     opacity: 1;
+    margin: 0 4% 1% 4%;
 }
 
 .text-div {
@@ -99,28 +111,53 @@ body {
     display:flex;
     justify-content: center;
     flex:1;
+    font-family: "Open Sans", sans-serif;
 }
 
 .completed {
     text-decoration: line-through;
 }
-
+div.focus {
+    outline:0;
+}
+.focus {
+    border: 2px solid rgba(0,0,0,0.6);
+    border-radius: 10px;
+    
+}
+/* BUTTONS */
+button {
+    color:white;
+    background: rgba(0,0,0,0.6);
+}
+button:focus {
+    outline:0;
+}
 .btn-primary {
     order: 1;
-    height: 22px;
+    height: 20px;
     margin: 4px;
+    border-radius: 10px;
+    
 }
 .btn-danger {
     order: 3;
-    height: 22px;
-    margin: 4px;
+    height: 30px;
+    border-radius: 10px;
+    background: rgba(190, 37, 37, 0.6)
 }
 .btn-success {
     order: 2;
-    height: 22px;
+    height: 20px;
+    margin: 4px;
+    border-radius: 10px;
+}
+.btn-info {
+    height: 30px;
+    border-radius: 10px;
     margin: 4px;
 }
-
+/* MODAL */
 .modal {
     display: none; 
     position: fixed; 
@@ -138,9 +175,10 @@ body {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid rgba(100, 100, 100, .9);
-    width: 80%;
+    width: 70%;
     max-height: calc(100vh - 210px);
     overflow-y: auto;
+    border-radius: 25px;
 }
 
 .close {
@@ -148,6 +186,9 @@ body {
     float: right;
     font-size: 28px;
     font-weight: bold;
+}
+.flavor-text{
+    text-decoration: underline;
 }
 
 .close:hover,
@@ -157,10 +198,3 @@ body {
     cursor: pointer;
 }
 
-.list-div {
-    border: rgba(100, 100, 100, .9) 1px solid;
-    border-radius: 25px;
-    height: 200px;
-    overflow: auto;
-
-}
