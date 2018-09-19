@@ -1,26 +1,35 @@
 body {
-    background: url(background.jpg);
-    background-size:cover;
     font-family: "Open Sans", sans-serif;
 
+}
+#background-img {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+#stopIt {
+    align-self: auto;
+    font-family: "Open Sans", "sans-serif";
 }
 
 #myBtn {
     height: 100%;
+
 }
 #submitBtn {
     height: 100%;
 }
 
-.btn-div-main {
-    /* justify-items: flex-start; */
-}
-
 .container {
     background:rgba(211, 211, 211, .8);
-    padding-top: 0px;
-    margin-top: 10%;
-    border-radius: 25px;
+    border-radius: 25px; 
+    
 }
 .header {
     font-family: "Permanent Marker", cursive;
@@ -33,14 +42,13 @@ body {
     align-content: center; 
     margin-bottom: 2%;
     justify-content: center;
-    
 }
 
 .container-2-input {
     font-family: "Open Sans", sans-serif;
 }
 #textBox {
-    width: 35vw;
+    width: 50vw;
     height: 100%;
 }
 .btn.btn-info {
@@ -59,10 +67,26 @@ body {
     border: 1px solid rgba(100, 100, 100, .9);
     border-radius: 10px;
     text-align: center;
-    width: 66%;
+    width: 100%;
     align-self: center;
     background-color: rgba(211, 211, 211, .8);
+    margin-bottom: 1%;
+    visibility: visible;
+    opacity: 1;
+}
 
+.delete-li {
+    display:flex;
+    padding: 4px;
+    border: 1px solid rgba(100, 100, 100, .9);
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    align-self: center;
+    background-color: rgba(211, 211, 211, .8);
+    margin-bottom: 1%;
+    visibility: visible;
+    opacity: 1;
 }
 
 .text-div {
@@ -108,7 +132,7 @@ body {
 }
 
 .modal-content {
-    background: rgba(211, 211, 211, .8);
+    background: rgb(211, 211, 211);
     margin: 15% auto;
     padding: 20px;
     border: 1px solid rgba(100, 100, 100, .9);
