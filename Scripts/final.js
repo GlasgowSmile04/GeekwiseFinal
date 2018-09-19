@@ -49,7 +49,8 @@ function completeLine(e){
     }
     else {
         editBtn.setAttribute("disabled", "disabled");
-        setTimeout(function(){moveLi(e)}, 3000)
+        setTimeout(function(){moveLi(e)}, 3000);
+        setTimeout(popModal, 3200);
     }
 
 };
@@ -102,10 +103,19 @@ function moveLi(e){
     textDiv.textContent = liText;
     //APPEND TO LI
     btnDiv.appendChild(deleteBtn);
-    newLi.classList.add("new-li");
+    newLi.classList.add("delete-li");
     newLi.appendChild(textDiv);
     newLi.appendChild(btnDiv);
 
     ul.removeChild(li);
     deletedUl.appendChild(newLi);
 };
+
+function popModal(){
+    modal.style.display = "block";
+    setTimeout(closeModal, 3000);
+}
+
+function closeModal(){
+    modal.style.display = "none";
+}
