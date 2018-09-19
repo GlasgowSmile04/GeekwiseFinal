@@ -5,6 +5,8 @@ let deletedUl = document.querySelector("#deletedList")
 let modal = document.getElementById('myModal');
 let btn = document.getElementById("myBtn");
 let span = document.getElementsByClassName("close")[0];
+let deleteTimer;
+let popTimer;
 
 submitBtn.onclick = () => {addLine();};
 textBox.addEventListener("keypress", e => {if(e.which === 13){addLine();};});
@@ -42,18 +44,25 @@ function editLine(e){
 function completeLine(e){
     let btnDiv = e.target.parentElement;
     let editBtn = e.target.previousSibling;
-    btnDiv.previousSibling.classList.toggle("completed")
+    let stopIt = document.querySelector("#stopIt");
+    btnDiv.previousSibling.classList.toggle("completed");
     if(editBtn.hasAttribute("disabled")){
-        clearTimeout();
+        clearTimeout(deleteTimer);
+        clearTimeout(popTimer);
         editBtn.removeAttribute("disabled");
+    }
+    else if(stopIt.checked == true){
+        editBtn.setAttribute("disabled", "disabled");
+        deleteTimer = setTimeout(function(){moveLi(e)}, 3000);
     }
     else {
         editBtn.setAttribute("disabled", "disabled");
-        setTimeout(function(){moveLi(e)}, 3000);
-        setTimeout(popModal, 3200);
+        deleteTimer = setTimeout(function(){moveLi(e)}, 3000);
+        popTimer = setTimeout(popModal, 3200);
     }
 
 };
+
 
 function addLine(){
     let newLi = document.createElement("li");

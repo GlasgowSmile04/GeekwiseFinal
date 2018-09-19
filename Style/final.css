@@ -13,6 +13,11 @@ body {
     align-content: center;
 }
 
+#stopIt {
+    align-self: auto;
+    font-family: "Open Sans", "sans-serif";
+}
+
 #myBtn {
     height: 100%;
 
@@ -37,7 +42,6 @@ body {
     align-content: center; 
     margin-bottom: 2%;
     justify-content: center;
-    
 }
 
 .container-2-input {
