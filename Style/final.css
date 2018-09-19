@@ -81,11 +81,13 @@ body {
     text-align: center;
     width: 94%;
     align-self: center;
-    background-color: rgba(211, 211, 211, .8);
-    margin: 0 4% 1% 4%;
+    background-color: rgba(200, 200, 200, .9);
+    margin: 0 4% 0.5% 4%;
 
-    visibility: visible;
-    opacity: 1;
+}
+
+li:nth-child(even){
+    background-color: rgba(225, 225, 225, .9)
 }
 
 .delete-li {
@@ -98,8 +100,6 @@ body {
     align-self: center;
     background-color: rgba(211, 211, 211, .8);
     margin-bottom: 1%;
-    visibility: visible;
-    opacity: 1;
     margin: 0 4% 1% 4%;
 }
 
