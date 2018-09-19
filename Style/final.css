@@ -29,6 +29,7 @@ body {
 .container {
     background:rgba(211, 211, 211, .8);
     border-radius: 25px; 
+    padding-bottom: 10px;
     
 }
 .header {
@@ -58,7 +59,8 @@ body {
 .list {
     display: flex;
     flex-direction: column;
-    padding-bottom: 10px;
+    padding: 10px;
+
 }
 
 .new-li {
@@ -137,6 +139,8 @@ body {
     padding: 20px;
     border: 1px solid rgba(100, 100, 100, .9);
     width: 80%;
+    max-height: calc(100vh - 210px);
+    overflow-y: auto;
 }
 
 .close {
@@ -151,4 +155,12 @@ body {
     color: rgba(100, 100, 100, .9);
     text-decoration: none;
     cursor: pointer;
+}
+
+.list-div {
+    border: rgba(100, 100, 100, .9) 1px solid;
+    border-radius: 25px;
+    height: 200px;
+    overflow: auto;
+
 }
